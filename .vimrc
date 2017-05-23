@@ -42,8 +42,7 @@ set term=xterm-256color
 set termencoding=utf-8
 
 
-"------- More stuff from Shawn"
-"remove trailing whitespace and ^M
+remove trailing whitespace and ^M
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufNewFile,BufRead *.py,*pyc setlocal expandtab
 " on ruby files tabstop is 2
